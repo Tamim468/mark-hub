@@ -1,8 +1,8 @@
 local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
 
-local s = VLib:Window("Mark Hub", "Rich Empire Tycoon", "G")
+local s = VLib:Window("Mark Hub", "Rich Empire Tycoon", "MH")
 
-local ss = s:Tab("Player")
+local ss = s:Tab("Main")
 
 ss:Textbox("Generate Cash", true,function(t)
 local args = {
