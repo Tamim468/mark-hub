@@ -1,0 +1,17 @@
+local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
+
+local s = VLib:Window("Mark Hub", "Rich Empire Tycoon", "G")
+
+local ss = s:Tab("Player")
+
+ss:Textbox("Generate Cash", true,function(t)
+local args = {
+    [1] = t,
+}
+
+game:GetService("ReplicatedStorage").RespawnService:FireServer(unpack(args))
+end)
+
+ss:Dropdown("Redeem Codes",{"lightning500k", "None", "None", "None", "None"},function(t)
+game.ReplicatedStorage.NewCodeEvent:FireServer(t)
+end)
