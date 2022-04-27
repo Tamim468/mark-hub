@@ -1,6 +1,6 @@
 local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
 
-local s = VLib:Window("Mark Hub", "Rich Empire Tycoon", "MH")
+local s = VLib:Window("Mark Hub", "Rich Empire Tycoon", "LOL EZ")
 
 local ss = s:Tab("Main")
 
@@ -12,6 +12,19 @@ local args = {
 game:GetService("ReplicatedStorage").RespawnService:FireServer(unpack(args))
 end)
 
-ss:Dropdown("Redeem Codes",{"lightning500k", "None", "None", "None", "None"},function(t)
+ss:Dropdown("Redeem Codes",{"lightning500k", "twitter1032", "None", "None", "None"},function(t)
 game.ReplicatedStorage.NewCodeEvent:FireServer(t)
+end)
+
+ss:Button("Rebirth",function()
+    local args = {
+    [1] = 1000000000000000000,
+}
+
+game:GetService("ReplicatedStorage").RespawnService:FireServer(unpack(args))
+
+local lol = game.Workspace["Tycoon Kit"].Tycoons["Millionaire Tycoon 3"].TycoonItems.Essentials.TouchToCollect.Givers.Giver
+
+firetouchinterest(game.Players.LocalPlayer.Character.Torso, lol, 0)
+game.ReplicatedStorage.rebirthEvent:FireServer()
 end)
