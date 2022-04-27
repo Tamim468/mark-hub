@@ -1,6 +1,6 @@
 local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
 
-local s = VLib:Window("Mark Hub", "Rich Empire Tycoon", "LOL EZ")
+local s = VLib:Window("Mark Hub", "Rich Empire Tycoon", "EZ")
 
 local ss = s:Tab("Main")
 
