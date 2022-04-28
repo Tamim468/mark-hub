@@ -25,7 +25,6 @@ game:GetService("ReplicatedStorage").RespawnService:FireServer(unpack(args))
 
 for v2, v3 in pairs(game.Workspace["Tycoon Kit"].Tycoons:GetChildren()) do
 if v3.TycoonItems.P1.Value == game.Players.LocalPlayer.Name then
-print("right tycoon");
 local lol = v3.TycoonItems.Essentials.TouchToCollect.Givers.Giver
 
 firetouchinterest(game.Players.LocalPlayer.Character.Torso, lol, 0)
