@@ -23,8 +23,12 @@ ss:Button("Rebirth",function()
 
 game:GetService("ReplicatedStorage").RespawnService:FireServer(unpack(args))
 
-local lol = game.Workspace["Tycoon Kit"].Tycoons["Millionaire Tycoon 3"].TycoonItems.Essentials.TouchToCollect.Givers.Giver
+for v2, v3 in pairs(game.Workspace["Tycoon Kit"].Tycoons:GetChildren()) do
+if v3.TycoonItems.P1.Value == game.Players.LocalPlayer.Name then
+print("right tycoon");
+local lol = v3.TycoonItems.Essentials.TouchToCollect.Givers.Giver
 
 firetouchinterest(game.Players.LocalPlayer.Character.Torso, lol, 0)
 game.ReplicatedStorage.rebirthEvent:FireServer()
+end
 end)
